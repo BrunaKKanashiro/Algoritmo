@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votação</title>
+</head>
+<body>
+    Quantidade de votos que o "Zé Buduia" teve na eleição: <input id="ipt_zebuduia" type="text">
+    Quantidade de votos que a "Maria Bigodenha" teve na eleição: <input id="ipt_mariabigodenha" type="text">
+    Quantidade de votos brancos que houveram na eleição: <input id="ipt_votos_branco" type="text">
+    Quantidade de votos nulos que houveram na eleição: <input id="ipt_votos_nulos" type="text">
+
+    <button onclick="calcular_resultado()">Resultado da Eleição</button>
+    <div id="totaldevoto"></div>
+
+</body>
+</html>
+ <script>
+    function calcular_resultado(){
+    var zebuduia = Number(ipt_zebuduia.value)
+    var mariabigodenha = Number(ipt_mariabigodenha.value)
+    var votosbrancos = Number(ipt_votos_branco.value)
+    var votosnulos = Number(ipt_votos_nulos.value)
+    var invalido = votosnulos + votosbrancos
+
+    var totaldevotos = zebuduia + mariabigodenha + votosbrancos + votosnulos
+    var ze_buduia_porcentagem = (zebuduia / totaldevotos)*100 
+    var maria_bigodenha_porcentagem = (mariabigodenha /totaldevotos)*100
+    var invalido_porcentagem = (invalido / totaldevotos) *100
+    
+
+    totaldevoto.innerHTML = ` <br> TOTAL DE VOTOS = ${totaldevotos} <br>
+    Zé Buduia = ${ze_buduia_porcentagem}% ${zebuduia} <br>
+    Maria Bigodenha = ${maria_bigodenha_porcentagem}% ${mariabigodenha} <br>
+    Inválidos = ${invalido_porcentagem}% ${invalido}`;
+      
+    }
+
+ </script>

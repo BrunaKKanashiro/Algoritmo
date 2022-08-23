@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qtdfilhos</title>
+</head>
+<body>
+    Quantidade de filhos maiores que 10 você posssui <input id="qtd_maiores" type="text">
+    Quantidade de filhos menores que 10 você posssui <input id="qtd_menores" type="text">
+
+    <Button onclick="calcular_aux_filhos()">Calcular Auxílio Filhos</Button>
+    <div id="filhos"></div>
+    
+</body>
+</html>
+    <script>
+        function calcular_aux_filhos(){
+            var criancamaior = qtd_maiores.value;
+            var criancamenor = qtd_menores.value;
+            var auxiliomenor = criancamenor * 30
+            var auxiliomaior = criancamaior * 20
+            var auxiliototal = auxiliomenor + auxiliomaior
+
+            filhos.innerHTML += `<br> Você tem ${criancamenor} filhos menores de 10 anos e ${criancamaior} filhos a partir de 10 anos, logo, seu
+"Auxílio Filhos" será de R$${auxiliototal}`;
+            
+            
+        }
+
+    </script>
