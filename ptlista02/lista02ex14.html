@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALORIAS</title>
+</head>
+<body>
+
+     Quantos pães franceses você consumiu no dia : <input id="ipt_paes_franceses_dia" type="text">
+     <br>
+     Quantas casquinhas você consumiu no dia : <input id="ipt_casquinhas_dia" type="text">
+     <br>
+     Quantos minutos de caminhada você fez no dia : <input id="ipt_caminhada_dia" type="text">
+     <br>
+     Quantos minutos de musculação você fez no dia : <input id="ipt_musculacao_dia" type="text">
+
+     <button onclick="calcule_calorias()">Calcule</button>
+     <div id="calorias">
+     </div>
+
+
+    </body>
+</html>
+<script>
+   function calcule_calorias(){
+    calorias.innerHTML += ("Entre calorias que ganhou e perdeu, seu saldo de calorias no dia é de " + (Number(ipt_paes_franceses_dia.value)*100 + (Number(ipt_casquinhas_dia.value)*300 - (Number(ipt_caminhada_dia.value)*50) - Number(ipt_musculacao_dia.value)*30)))               
+   }
+</script>

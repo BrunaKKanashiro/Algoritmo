@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salário</title>
+</head>
+<body>
+    valor do  seu salário bruto: <input id="ipt_salario_bruto" type="text">
+    
+    <button onclick="calcular_valor()">Calcule o valor</button>
+    <div id="div_inss" >valor do seu salário com desconto de INSS (previdência)</div>
+    <div id="div_ir">valor do seu salário com Imposto de renda</div>
+    <div id="div_impostosindical">valor do seu salário com imposto sindical</div>
+</body>
+</html>
+    <script>
+        function calcular_valor(){
+            div_inss.innerHTML += "<br> junto ao seu salário é igual a " + (Number(ipt_salario_bruto.value * 10/100))
+            div_ir.innerHTML += "<br> junto ao seu salário é igual a " + (Number(ipt_salario_bruto.value * 20/100));
+            div_impostosindical.innerHMTL += "<br> junto ao seu salário é igual a " + (Number(ipt_salario_bruto.value * 1/30));
+        }
+    </script>

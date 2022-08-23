@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+</head>
+<body>
+    Insira seu peso: <input id="ipt_peso" type="text">
+    Insira sua altura: <input id="ipt_altura" type="text">
+
+    <button onclick="imc_homem()">IMC Homem</button>
+    <button onclick="imc_mulher()">IMC Mulher</button>
+    <button onclick="imc_naobinario()">IMC não binário</button> 
+    <br>
+     Seu IMC é: <div id="div_unisexual"></div>
+
+</body>
+</html>
+    <script>
+        function imc_homem(){
+            div_unisexual.innerHTML += "<br> do Homem é :" + (ipt_peso.value / (ipt_altura.value * ipt_altura.value ));
+        }
+        function imc_mulher(){
+            div_unisexual.innerHTML += "<br> da Mulher é: " + (ipt_peso.value / (ipt_altura.value * ipt_altura.value ) - ipt_peso.value / (ipt_altura.value * ipt_altura.value ) * 10/100);
+        }
+        function imc_naobinario(){
+            div_unisexual.innerHTML += "<br> Não Binário tem 15% a mais que o homem, esses 15% são equivalente a " + (ipt_peso.value / (ipt_altura.value * ipt_altura.value ) * 15/100);
+            div_unisexual.innerHTML += "<br> o IMC Não Binário é a soma do IMC do homem mais os 15%, dando o IMC de " + (ipt_peso.value / (ipt_altura.value * ipt_altura.value ) +  ipt_peso.value / (ipt_altura.value * ipt_altura.value ) * 15/100);
+        }
+        
+    </script>

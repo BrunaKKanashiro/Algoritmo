@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gasto de Água</title>
+</head>
+<body>
+    quantos minutos a torneira 1 fica pingando? <input id="ipt_torneira1" type="text">
+    quantos minutos a torneira 2 fica pingando? <input id="ipt_torneira2" type="text">
+    quantos minutos a torneira 3 fica pingando? <input id="ipt_torneira3" type="text">
+
+    <button onclick="calcular_pmin()">Desperdício total</button>
+
+    
+</body>
+</html>
+    <script>
+        function calcular_pmin(){
+        alert("Suas 3 torneiras, juntas, desperdiçaram " + Number(ipt_torneira1.value)+ Number(ipt_torneira2.value) + Number(ipt_torneira3.value) * 15 + " litros de água")
+        }
+    </script>
